@@ -1,7 +1,9 @@
 import requests
 import json
-import os
+import os, time
 import aspose.threed as a3d
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 URL = "https://api-app.map4d.vn/map/object/"
 SAVE_FOLDER_PATH = "data/"
@@ -12,9 +14,14 @@ SAVE_FOLDER_GLB_PATH =  SAVE_FOLDER_PATH + "glb/"
 
 DOWNLOADED_IDS_FILE = "log/downloaded_id.txt"
 ERROR_IDS_FILE = "log/error_ids.txt"
-OBJECT_IDS_FILE = "object_id.txt"
+OBJECT_IDS_FILE = "a.txt"
 logs = []
 
+session = requests.Session()
+retry = Retry(connect=3, backoff_factor=0.5)
+adapter = HTTPAdapter(max_retries=retry)
+session.mount('http://', adapter)
+session.mount('https://', adapter)
 
 # Return unique ids
 def processing_list_from_file(file_path):
@@ -62,8 +69,10 @@ def get_data_by_id(object_id):
     global downloaded_ids
     global error_ids
     try:
+        #print("-----------------------------------------------------------------------------")
         main_url = URL + object_id
         response = requests.get(main_url)
+        
         with open(SAVE_FOLDER_JSON_PATH + object_id + '.json', 'w') as f:
             json.dump(json.loads(response.text), f, indent=4)
 
@@ -71,11 +80,13 @@ def get_data_by_id(object_id):
         model = city_object["model"]
         objUrl = model["objUrl"]
         objImg = model["textureUrl"]
-
-        response = requests.get(objUrl)
+    
+        #print(f"objUrl {objUrl}")
+        #print(f"objImg {objImg}")
+        response = requests.get(objUrl,timeout=1)
         open(SAVE_FOLDER_OBJ_PATH + object_id +".obj", "wb").write(response.content)
 
-        response = requests.get(objImg)
+        response = requests.get(objImg, timeout=1)
         open(SAVE_FOLDER_TEXTURE_PATH + object_id +".png", "wb").write(response.content)
 
         # convert obj to glb
@@ -89,6 +100,8 @@ def get_data_by_id(object_id):
         error_ids.append(object_id)
         write_log(f'{object_id} ---  False')
         print(e)
+        #time.sleep(5)
+        print("Was a nice sleep, now let me continue...")
 
 
 def get_object_id(object_id_file, downloaded_object_id_file ):

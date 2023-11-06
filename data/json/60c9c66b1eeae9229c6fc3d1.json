@@ -1,0 +1,392 @@
+{
+    "code": "ok",
+    "result": {
+        "id": "60c9c66b1eeae9229c6fc3d1",
+        "name": " Bia Loi Beo",
+        "places": null,
+        "placeDetails": [
+            {
+                "id": "60dd3737f81cb14bc86225d3",
+                "location": {
+                    "lng": 105.8520727,
+                    "lat": 21.0347954
+                },
+                "address": "18 P. T\u1ea1 Hi\u1ec7n, H\u00e0ng Bu\u1ed3m, Ho\u00e0n Ki\u1ebfm, H\u00e0 N\u1ed9i, Vi\u1ec7t Nam",
+                "name": "Bia",
+                "objectId": "60c9c66b1eeae9229c6fc3d1",
+                "description": " 18 T\u1ea1 Hi\u1ec7n ,  H\u00e0ng Bu\u1ed3m ,  Ho\u00e0n Ki\u1ebfm ,  H\u00e0 N\u1ed9i ,  Vi\u1ec7t Nam ",
+                "types": [],
+                "typeInfos": null,
+                "addressComponents": [
+                    {
+                        "types": [
+                            "extra"
+                        ],
+                        "name": "P"
+                    },
+                    {
+                        "types": [
+                            "housenumber"
+                        ],
+                        "name": "18"
+                    },
+                    {
+                        "types": [
+                            "street"
+                        ],
+                        "name": "T\u1ea1 Hi\u1ec7n"
+                    },
+                    {
+                        "types": [
+                            "admin_level_4"
+                        ],
+                        "name": "Ph\u01b0\u1eddng H\u00e0ng Bu\u1ed3m"
+                    },
+                    {
+                        "types": [
+                            "admin_level_3"
+                        ],
+                        "name": "Qu\u1eadn Ho\u00e0n Ki\u1ebfm"
+                    },
+                    {
+                        "types": [
+                            "admin_level_2"
+                        ],
+                        "name": "Th\u00e0nh ph\u1ed1 H\u00e0 N\u1ed9i"
+                    },
+                    {
+                        "types": [
+                            "admin_level_1"
+                        ],
+                        "name": "Vi\u1ec7t Nam"
+                    }
+                ],
+                "photos": [
+                    {
+                        "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/60fe2ce829c3ce454f9883bf.jpg",
+                        "name": "60fe2ce829c3ce454f9883bf.jpg",
+                        "description": null,
+                        "createdBy": null
+                    },
+                    {
+                        "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/60fe2ce929c3ce454f9883c0.jpg",
+                        "name": "60fe2ce929c3ce454f9883c0.jpg",
+                        "description": null,
+                        "createdBy": null
+                    },
+                    {
+                        "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/60fe2ce929c3ce454f9883c2.jpeg",
+                        "name": "60fe2ce929c3ce454f9883c2.jpeg",
+                        "description": null,
+                        "createdBy": null
+                    }
+                ],
+                "startDate": null,
+                "endDate": null,
+                "placeTypes": null,
+                "otherPlaceInObjects": [],
+                "object": {
+                    "id": "60c9c66b1eeae9229c6fc3d1",
+                    "name": " Bia Loi Beo",
+                    "location": {
+                        "lng": 105.85207606543861,
+                        "lat": 21.03477969208437
+                    },
+                    "scale": 1.2,
+                    "bearing": 106,
+                    "elevation": 0,
+                    "heightScale": 1,
+                    "camera": {
+                        "zoom": 22,
+                        "bearing": 299.3693933626057,
+                        "tilt": 71,
+                        "target": {
+                            "lng": 105.85199451444794,
+                            "lat": 21.034821069256125
+                        }
+                    },
+                    "model": {
+                        "id": null,
+                        "objName": "60c9c6641eeae9229c6fc3cc.obj",
+                        "objUrl": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/models/60c9c6641eeae9229c6fc3cc.obj",
+                        "color": null,
+                        "type": "Object",
+                        "coordinates": [
+                            {
+                                "lng": 105.85212418797113,
+                                "lat": 21.034824607841806
+                            },
+                            {
+                                "lng": 105.85212418794211,
+                                "lat": 21.034734776313396
+                            },
+                            {
+                                "lng": 105.85202794293511,
+                                "lat": 21.034734776313396
+                            },
+                            {
+                                "lng": 105.85202794290609,
+                                "lat": 21.034824607841806
+                            },
+                            {
+                                "lng": 105.85212418797113,
+                                "lat": 21.034824607841806
+                            }
+                        ],
+                        "height": null,
+                        "textureName": "60c9c6651eeae9229c6fc3ce.jpg",
+                        "textureUrl": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/textures/60c9c6651eeae9229c6fc3ce.jpg"
+                    },
+                    "types": [
+                        "point"
+                    ],
+                    "minZoom": 17,
+                    "maxZoom": 19,
+                    "startDate": null,
+                    "endDate": null,
+                    "isVerified": false,
+                    "isDeleted": false,
+                    "source": {
+                        "name": "vmp"
+                    },
+                    "addressComponents": [
+                        {
+                            "types": [
+                                "admin_level_2"
+                            ],
+                            "name": "Th\u00e0nh ph\u1ed1 H\u00e0 N\u1ed9i",
+                            "searchName": null
+                        },
+                        {
+                            "types": [
+                                "admin_level_3"
+                            ],
+                            "name": "Qu\u1eadn Ho\u00e0n Ki\u1ebfm",
+                            "searchName": null
+                        },
+                        {
+                            "types": [
+                                "admin_level_4"
+                            ],
+                            "name": "Ph\u01b0\u1eddng H\u00e0ng Bu\u1ed3m",
+                            "searchName": null
+                        },
+                        {
+                            "types": [
+                                "street"
+                            ],
+                            "name": "T\u1ea1 Hi\u1ec7n",
+                            "searchName": null
+                        }
+                    ],
+                    "typeInfos": null,
+                    "metadata": null,
+                    "address": null,
+                    "createdBy": {
+                        "userId": "b4e22d30-feb2-442c-aea8-814ed6e5e8e7",
+                        "displayName": "Th\u00e0nh Nguy\u1ec5n"
+                    },
+                    "updatedBy": {
+                        "userId": "b4e22d30-feb2-442c-aea8-814ed6e5e8e7",
+                        "displayName": "Th\u00e0nh Nguy\u1ec5n"
+                    },
+                    "createdDate": 1623836267622,
+                    "updatedDate": 1623836267622
+                },
+                "tags": [],
+                "phoneNumber": null,
+                "website": null,
+                "businessHours": [],
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        105.8520727,
+                        21.0347954
+                    ]
+                },
+                "rank": {
+                    "value": 0
+                },
+                "metadata": [],
+                "mediaFiles": [
+                    {
+                        "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/60fe2ce929c3ce454f9883c2.jpeg",
+                        "name": "60fe2ce929c3ce454f9883c2.jpeg",
+                        "typeFile": "Image",
+                        "description": "",
+                        "duration": 0,
+                        "createdBy": {
+                            "userId": "f2ef1208-0737-4db8-baab-1087fe6eb794",
+                            "displayName": "Nguyen Xuan Linh",
+                            "lastName": "Nguyen",
+                            "firstName": "Xuan Linh",
+                            "localGuideInfo": {
+                                "currentScores": 40,
+                                "nextScores": 85,
+                                "currentRank": {
+                                    "key": "One",
+                                    "description": "C\u1ea5p 1",
+                                    "value": 20,
+                                    "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/icons/rank_one.png"
+                                }
+                            },
+                            "avatar": ""
+                        },
+                        "createdDate": 1627270377363
+                    },
+                    {
+                        "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/60fe2ce929c3ce454f9883c0.jpg",
+                        "name": "60fe2ce929c3ce454f9883c0.jpg",
+                        "typeFile": "Image",
+                        "description": "",
+                        "duration": 0,
+                        "createdBy": {
+                            "userId": "f2ef1208-0737-4db8-baab-1087fe6eb794",
+                            "displayName": "Nguyen Xuan Linh",
+                            "lastName": "Nguyen",
+                            "firstName": "Xuan Linh",
+                            "localGuideInfo": {
+                                "currentScores": 40,
+                                "nextScores": 85,
+                                "currentRank": {
+                                    "key": "One",
+                                    "description": "C\u1ea5p 1",
+                                    "value": 20,
+                                    "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/icons/rank_one.png"
+                                }
+                            },
+                            "avatar": ""
+                        },
+                        "createdDate": 1627270377281
+                    },
+                    {
+                        "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/60fe2ce829c3ce454f9883bf.jpg",
+                        "name": "60fe2ce829c3ce454f9883bf.jpg",
+                        "typeFile": "Image",
+                        "description": "",
+                        "duration": 0,
+                        "createdBy": {
+                            "userId": "f2ef1208-0737-4db8-baab-1087fe6eb794",
+                            "displayName": "Nguyen Xuan Linh",
+                            "lastName": "Nguyen",
+                            "firstName": "Xuan Linh",
+                            "localGuideInfo": {
+                                "currentScores": 40,
+                                "nextScores": 85,
+                                "currentRank": {
+                                    "key": "One",
+                                    "description": "C\u1ea5p 1",
+                                    "value": 20,
+                                    "url": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/icons/rank_one.png"
+                                }
+                            },
+                            "avatar": ""
+                        },
+                        "createdDate": 1627270377201
+                    }
+                ],
+                "isDeleted": false,
+                "reviewsSummary": {
+                    "ratingAverage": 0,
+                    "totalRating": 0,
+                    "numberOfRatingOneStar": 0,
+                    "numberOfRatingTwoStar": 0,
+                    "numberOfRatingThreeStar": 0,
+                    "numberOfRatingFourStar": 0,
+                    "numberOfRatingFiveStar": 0
+                }
+            }
+        ],
+        "location": {
+            "lng": 105.85207606543861,
+            "lat": 21.03477969208437
+        },
+        "scale": 1.2,
+        "bearing": 106,
+        "elevation": 0,
+        "heightScale": 1,
+        "camera": {
+            "zoom": 22,
+            "bearing": 299.3693933626057,
+            "tilt": 71,
+            "target": {
+                "lng": 105.85199451444794,
+                "lat": 21.034821069256125
+            }
+        },
+        "model": {
+            "id": null,
+            "name": null,
+            "objName": "60c9c6641eeae9229c6fc3cc.obj",
+            "objUrl": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/models/60c9c6641eeae9229c6fc3cc.obj",
+            "color": null,
+            "type": "Object",
+            "coordinates": [
+                {
+                    "lng": 105.85212418797113,
+                    "lat": 21.034824607841806
+                },
+                {
+                    "lng": 105.85212418794211,
+                    "lat": 21.034734776313396
+                },
+                {
+                    "lng": 105.85202794293511,
+                    "lat": 21.034734776313396
+                },
+                {
+                    "lng": 105.85202794290609,
+                    "lat": 21.034824607841806
+                },
+                {
+                    "lng": 105.85212418797113,
+                    "lat": 21.034824607841806
+                }
+            ],
+            "height": null,
+            "textureName": "60c9c6651eeae9229c6fc3ce.jpg",
+            "textureUrl": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/textures/60c9c6651eeae9229c6fc3ce.jpg"
+        },
+        "types": [
+            "point"
+        ],
+        "minZoom": 17,
+        "maxZoom": 19,
+        "addressComponents": [
+            {
+                "types": [
+                    "admin_level_2"
+                ],
+                "name": "Th\u00e0nh ph\u1ed1 H\u00e0 N\u1ed9i"
+            },
+            {
+                "types": [
+                    "admin_level_3"
+                ],
+                "name": "Qu\u1eadn Ho\u00e0n Ki\u1ebfm"
+            },
+            {
+                "types": [
+                    "admin_level_4"
+                ],
+                "name": "Ph\u01b0\u1eddng H\u00e0ng Bu\u1ed3m"
+            },
+            {
+                "types": [
+                    "street"
+                ],
+                "name": "T\u1ea1 Hi\u1ec7n"
+            }
+        ],
+        "startDate": null,
+        "endDate": null,
+        "source": {
+            "name": "vmp"
+        },
+        "typeInfos": {
+            "point": "\u0110\u1ecba \u0111i\u1ec3m n\u00f3i chung"
+        },
+        "metadata": null,
+        "address": null
+    }
+}
