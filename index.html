@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    
+    <!-- Cesium -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.80/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.80/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css" />
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit-icons.min.js"></script>
+    
+    <!-- App CSS -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    
+
+</head>
+
+<body>
+<div class="main-screen uk-section uk-padding-remove">
+    <div id="cesiumContainer"></div>
+</div>
+
+<script>
+    // Init Cesium Ion
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiYjJmMDA2NC0yY2YyLTRkOGEtOGVmYi03YmNmZmE1NzcyY2MiLCJpZCI6ODk3NzUsImlhdCI6MTY0OTkyNTEwMX0.VPFCxddX_V2UKjOJeqJszZ25c9z4HA2BSYimPLYrbWo';
+
+    // Create viewer
+    let viewer = new Cesium.Viewer('cesiumContainer', {
+        baseLayerPicker: true, //  type map
+        vrButton: false,
+        geocoder: false,
+        navigationHelpButton: false,
+        selectionIndicator: true,
+        shadows: false,
+        timeline: false,
+        sceneModePicker: false, // type show map
+        animation: true,
+    });
+
+    // set Time Format
+    viewer.animation.viewModel.timeFormatter = function(date, viewModel) {
+        date = Cesium.JulianDate.toDate(date);
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let ss = date.getSeconds();
+        hh = hh < 10 ? "0" + hh : hh;
+        mm = mm < 10 ? "0" + mm : mm;
+        ss = ss < 10 ? "0" + ss : ss;
+        return `${hh}:${mm}:${ss}`;
+    };
+    
+    // Start time when run app
+    viewer.clock.shouldAnimate  = true;
+    let city_entity_list = [];
+    function view_city_model(object_id){
+        // get json
+        let url = './data/json/' + object_id + '.json';
+        fetch(url)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let fa = []
+            
+                // Init data
+                let lng = data["result"]["location"]["lng"];
+                let lat = data["result"]["location"]["lat"];
+                let height = 0;
+                let position = Cesium.Cartesian3.fromDegrees(lng, lat, height);
+                let heading = 0;
+                if (data["result"]["bearing"] !== null){
+                    heading = data["result"]["bearing"] + 20;
+                    //console.log(heading)
+                }
+                let pitch = 0;
+                let roll = 0;
+                let hpr = new Cesium.HeadingPitchRoll(heading, pitch, roll);
+                Cesium.HeadingPitchRoll.fromDegrees(heading, pitch, roll, hpr)
+                let orientation = Cesium.Transforms.headingPitchRollQuaternion(position, hpr);
+
+                // add model into web
+                let obj_txt_entity =viewer.entities.add({
+                    name: object_id,
+                    description: "obj",
+                    position: position,
+                    orientation: orientation,
+                    model: {
+                        uri: "./data/glb/"+ object_id + ".glb",
+                        minimumPixelSize: 0.5,
+                        maximumScale: 1,
+                        color: Cesium.Color.WHITE.withAlpha(1),
+                    },
+
+                });
+            
+                city_entity_list.push(obj_txt_entity);
+                viewer.zoomTo(obj_txt_entity);
+            })
+        }
+
+
+    fetch('./log/downloaded_id.txt').then(response => response.text()).then(
+        text => {
+            let arr = text.split("\n")
+            let fa = []
+            for (let i=0; i< arr.length; i++){
+                try{
+                    if(arr[i] !== '') view_city_model(arr[i])  
+                }catch (e){
+                    console.log(arr[i]);
+                    fa.push(arr[i])
+                }    
+            }
+            console.log(fa)
+
+        } 
+    )
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+    "code": "ok",
+    "result": {
+        "id": "5f8d5e38797102214f9de2d2",
+        "name": "Kh\u00e1ch S\u1ea1n Novotel Suites H\u00e0 N\u1ed9i",
+        "places": null,
+        "placeDetails": [],
+        "location": {
+            "lng": 105.78539769589783,
+            "lat": 21.03034385276524
+        },
+        "scale": 1,
+        "bearing": 80,
+        "elevation": 0,
+        "heightScale": 1,
+        "camera": {
+            "zoom": 20,
+            "bearing": -29.40000000000005,
+            "tilt": 58.25,
+            "target": {
+                "lng": 105.78539769589783,
+                "lat": 21.03034385276524
+            }
+        },
+        "model": {
+            "id": null,
+            "name": null,
+            "objName": "6149572e2f30391a8a27c6ab.obj",
+            "objUrl": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/models/6149572e2f30391a8a27c6ab.obj",
+            "color": null,
+            "type": "Object",
+            "coordinates": [
+                {
+                    "lng": 105.7854458169978,
+                    "lat": 21.03038876852268
+                },
+                {
+                    "lng": 105.78544581696879,
+                    "lat": 21.03029893699427
+                },
+                {
+                    "lng": 105.78534957482688,
+                    "lat": 21.03029893699427
+                },
+                {
+                    "lng": 105.78534957479788,
+                    "lat": 21.03038876852268
+                },
+                {
+                    "lng": 105.7854458169978,
+                    "lat": 21.03038876852268
+                }
+            ],
+            "height": null,
+            "textureName": "614957302f30391a8a27c6ad.jpg",
+            "textureUrl": "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/textures/614957302f30391a8a27c6ad.jpg"
+        },
+        "types": [
+            "hotel"
+        ],
+        "minZoom": 17,
+        "maxZoom": 19,
+        "addressComponents": [
+            {
+                "types": [
+                    "admin_level_2"
+                ],
+                "name": "Th\u00e0nh ph\u1ed1 H\u00e0 N\u1ed9i"
+            },
+            {
+                "types": [
+                    "admin_level_3"
+                ],
+                "name": "Qu\u1eadn C\u1ea7u Gi\u1ea5y"
+            },
+            {
+                "types": [
+                    "admin_level_4"
+                ],
+                "name": "Ph\u01b0\u1eddng D\u1ecbch V\u1ecdng H\u1eadu"
+            },
+            {
+                "types": [
+                    "street"
+                ],
+                "name": "P.Duy T\u00e2n"
+            },
+            {
+                "types": [
+                    "housenumber"
+                ],
+                "name": "5"
+            }
+        ],
+        "startDate": 1222794000000,
+        "endDate": null,
+        "source": {
+            "name": "vmp"
+        },
+        "typeInfos": {
+            "hotel": "Kh\u00e1ch s\u1ea1n"
+        },
+        "metadata": null,
+        "address": "5 P.Duy T\u00e2n, Ph\u01b0\u1eddng D\u1ecbch V\u1ecdng H\u1eadu, Qu\u1eadn C\u1ea7u Gi\u1ea5y, Th\u00e0nh ph\u1ed1 H\u00e0 N\u1ed9i"
+    }
+}
