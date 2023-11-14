@@ -100,8 +100,8 @@ def get_data_by_id(object_id):
         error_ids.append(object_id)
         write_log(f'{object_id} ---  False')
         print(e)
-        #time.sleep(5)
-        print("Was a nice sleep, now let me continue...")
+        
+        #print("Was a nice sleep, now let me continue...")
 
 
 def get_object_id(object_id_file, downloaded_object_id_file ):
@@ -115,11 +115,18 @@ def get_object_id(object_id_file, downloaded_object_id_file ):
 
     # check downloaded id 
     downloaded_ids = processing_list_from_file(downloaded_object_id_file)
+    
     write_log(f"Total downloaded ids: {len(object_ids)}")
     write_log(f"Comparing downloaded ids with new ids")
 
     new_ids = set(object_ids) - set(downloaded_ids)
     write_log(f"Total file will download: {len(new_ids)}")
+
+    #errored_ids = processing_list_from_file(ERROR_IDS_FILE)
+    #write_log(f"Total errored ids: {len(errored_ids)}")
+    #write_log(f"Comparing errored ids with new ids")
+    #new_ids = set(new_ids) - set(errored_ids)
+
     return list(new_ids)
 
 def write_list_to_txt_file(file_path, list_arr):
@@ -149,6 +156,7 @@ def main():
 
     for index,id in enumerate(object_ids):
         get_data_by_id(id)
+        
 
     with open('log/logs.json', 'w') as f:
         json.dump(logs, f)
